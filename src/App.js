@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import CreateMovie from './components/CreateMovie';
+import MoviesList from './components/MoviesList';
+//import UpdateMovie from './components/UpdateMovie'; // Pass movieId prop
+//import DeleteMovie from './components/DeleteMovie'; // Pass movieId prop
+//import MovieDetail from './components/MovieDetail'; // Pass movieId prop
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CreateMovie />
+      <MoviesList />
+      {/* Exemples d'utilisation des autres composants */}
+      {/* <UpdateMovie movieId="some-movie-id" /> */}
+      {/* <DeleteMovie movieId="some-movie-id" /> */}
+      {/* <MovieDetail movieId="some-movie-id" /> */}
     </div>
   );
-}
+};
 
 export default App;
